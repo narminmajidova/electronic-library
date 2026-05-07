@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - Digital Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Digital Library</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="catalog.html" class="nav-link active">Catalog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="catalog-main">
+        <section class="catalog-container">
+            <h1>Book Catalog</h1>
+            
+            <div class="catalog-layout">
+                <aside class="filters-panel">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <label class="filter-title">Category</label>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="category-filter" value="fiction"> Fiction</label>
+                            <label><input type="checkbox" class="category-filter" value="science"> Science</label>
+                            <label><input type="checkbox" class="category-filter" value="history"> History</label>
+                            <label><input type="checkbox" class="category-filter" value="biography"> Biography</label>
+                            <label><input type="checkbox" class="category-filter" value="technology"> Technology</label>
+                            <label><input type="checkbox" class="category-filter" value="philosophy"> Philosophy</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-title">Year Published</label>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="year-filter" value="2020-2026"> 2020 - 2026</label>
+                            <label><input type="checkbox" class="year-filter" value="2010-2019"> 2010 - 2019</label>
+                            <label><input type="checkbox" class="year-filter" value="2000-2009"> 2000 - 2009</label>
+                            <label><input type="checkbox" class="year-filter" value="before-2000"> Before 2000</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-title">Rating</label>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="rating-filter" value="5"> ⭐⭐⭐⭐⭐ 5 Stars</label>
+                            <label><input type="checkbox" class="rating-filter" value="4"> ⭐⭐⭐⭐ 4+ Stars</label>
+                            <label><input type="checkbox" class="rating-filter" value="3"> ⭐⭐⭐ 3+ Stars</label>
+                        </div>
+                    </div>
+
+                    <button class="reset-filters-btn">Reset Filters</button>
+                </aside>
+
+                <div class="catalog-content">
+                    <div class="search-sort-bar">
+                        <input type="text" id="catalogSearch" placeholder="Search by title, author..." class="catalog-search">
+                        <select id="sortBy" class="sort-select">
+                            <option value="relevance">Sort by: Relevance</option>
+                            <option value="title">Sort by: Title (A-Z)</option>
+                            <option value="author">Sort by: Author</option>
+                            <option value="newest">Sort by: Newest</option>
+                            <option value="rating">Sort by: Rating</option>
+                        </select>
+                    </div>
+
+                    <div id="catalogGrid" class="catalog-grid">
+                        <!-- Books will be populated here by JavaScript -->
+                        <div class="book-card">
+                            <div class="book-cover">📕</div>
+                            <h3>The Great Gatsby</h3>
+                            <p class="author">F. Scott Fitzgerald</p>
+                            <p class="year">1925</p>
+                            <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                            <p class="category-tag">Fiction</p>
+                            <a href="book-details.html?id=1" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📗</div>
+                            <h3>Pride and Prejudice</h3>
+                            <p class="author">Jane Austen</p>
+                            <p class="year">1813</p>
+                            <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                            <p class="category-tag">Fiction</p>
+                            <a href="book-details.html?id=2" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📙</div>
+                            <h3>1984</h3>
+                            <p class="author">George Orwell</p>
+                            <p class="year">1949</p>
+                            <div class="rating">⭐⭐⭐⭐ (4.7)</div>
+                            <p class="category-tag">Fiction</p>
+                            <a href="book-details.html?id=3" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📘</div>
+                            <h3>To Kill a Mockingbird</h3>
+                            <p class="author">Harper Lee</p>
+                            <p class="year">1960</p>
+                            <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                            <p class="category-tag">Fiction</p>
+                            <a href="book-details.html?id=4" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📕</div>
+                            <h3>A Brief History of Time</h3>
+                            <p class="author">Stephen Hawking</p>
+                            <p class="year">1988</p>
+                            <div class="rating">⭐⭐⭐⭐ (4.6)</div>
+                            <p class="category-tag">Science</p>
+                            <a href="book-details.html?id=5" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📗</div>
+                            <h3>Sapiens</h3>
+                            <p class="author">Yuval Noah Harari</p>
+                            <p class="year">2011</p>
+                            <div class="rating">⭐⭐⭐⭐ (4.7)</div>
+                            <p class="category-tag">History</p>
+                            <a href="book-details.html?id=6" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📙</div>
+                            <h3>Steve Jobs</h3>
+                            <p class="author">Walter Isaacson</p>
+                            <p class="year">2011</p>
+                            <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                            <p class="category-tag">Biography</p>
+                            <a href="book-details.html?id=7" class="view-btn">View Details</a>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-cover">📘</div>
+                            <h3>Clean Code</h3>
+                            <p class="author">Robert C. Martin</p>
+                            <p class="year">2008</p>
+                            <div class="rating">⭐⭐⭐⭐ (4.6)</div>
+                            <p class="category-tag">Technology</p>
+                            <a href="book-details.html?id=8" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Digital Library is a comprehensive online reference system providing access to a vast collection of books and resources.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@digitallibrary.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Digital Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

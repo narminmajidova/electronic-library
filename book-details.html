@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details - Digital Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Digital Library</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="book-details-main">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="catalog.html">Catalog</a> / <span id="bookTitle">Book Title</span>
+        </div>
+
+        <div class="book-details-container">
+            <div class="book-cover-section">
+                <div class="book-cover-large">📕</div>
+                <button class="add-to-favorites-btn">❤️ Add to Favorites</button>
+                <button class="borrow-btn">📮 Borrow</button>
+            </div>
+
+            <div class="book-info-section">
+                <h1 id="detailTitle">The Great Gatsby</h1>
+                <p id="detailAuthor" class="detail-author">F. Scott Fitzgerald</p>
+                
+                <div class="rating-section">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <span class="rating-value">(4.8/5)</span>
+                    <span class="total-ratings">(1,234 ratings)</span>
+                </div>
+
+                <div class="book-metadata">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Year Published:</span>
+                        <span id="detailYear" class="metadata-value">1925</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Category:</span>
+                        <span id="detailCategory" class="metadata-value">Fiction</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Pages:</span>
+                        <span id="detailPages" class="metadata-value">180</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">ISBN:</span>
+                        <span id="detailISBN" class="metadata-value">978-0-7432-7356-5</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Language:</span>
+                        <span class="metadata-value">English</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Availability:</span>
+                        <span class="metadata-value availability-available">Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="book-description-section">
+            <h2>About This Book</h2>
+            <p id="detailDescription">
+                The Great Gatsby is a novel of the Jazz Age that has been acclaimed by generations of readers. 
+                The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan is a 
+                tragic tale of American idealism and obsession. Set in the summer of 1922, the novel takes place 
+                following the end of World War I. The era of the story, known as the Jazz Age, was a time of great wealth 
+                and material excess, with stock market investments that seemed foolproof. It was also a time of tremendous moral decay.
+            </p>
+        </section>
+
+        <section class="book-reviews-section">
+            <h2>Reader Reviews</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Sarah Johnson</span>
+                        <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-date">Published 2 weeks ago</p>
+                    <p class="review-text">A timeless classic that captures the essence of the American Dream. The prose is beautiful and the characters are unforgettable.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Michael Chen</span>
+                        <span class="review-rating">⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-date">Published 1 month ago</p>
+                    <p class="review-text">Excellent narrative structure. While some might find it slow in places, it's worth every page for the character development.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Emma Wilson</span>
+                        <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-date">Published 1 month ago</p>
+                    <p class="review-text">One of the greatest novels ever written. It remains relevant even after a century. Highly recommended!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="similar-books-section">
+            <h2>Similar Books You Might Like</h2>
+            <div class="similar-books-grid">
+                <div class="book-card">
+                    <div class="book-cover">📗</div>
+                    <h3>Pride and Prejudice</h3>
+                    <p class="author">Jane Austen</p>
+                    <p class="year">1813</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <a href="book-details.html?id=2" class="view-btn">View Details</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">📙</div>
+                    <h3>1984</h3>
+                    <p class="author">George Orwell</p>
+                    <p class="year">1949</p>
+                    <div class="rating">⭐⭐⭐⭐ (4.7)</div>
+                    <a href="book-details.html?id=3" class="view-btn">View Details</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">📘</div>
+                    <h3>To Kill a Mockingbird</h3>
+                    <p class="author">Harper Lee</p>
+                    <p class="year">1960</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <a href="book-details.html?id=4" class="view-btn">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Digital Library is a comprehensive online reference system providing access to a vast collection of books and resources.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@digitallibrary.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Digital Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
